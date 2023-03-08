@@ -1,0 +1,59 @@
+@use 'resets.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit');
+
+$font-color: hsl(218, 44%, 22%);
+$accent-color: hsl(220, 15%, 55%);
+$light-gray: hsl(212, 45%, 89%);
+$white: #fff;
+$border-rad: 0.66rem;
+
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-size: 15px;
+  color: $font-color;
+  background: $light-gray;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  
+  @include flex-centered();
+}
+
+
+.containter {
+  border-radius: $border-rad;
+  background: $white;
+  padding: 1rem;
+  max-width: 18rem;
+  text-align: center;
+  margin: 0 1rem;
+
+  img {
+    inline-size: 100%;
+    object-fit: cover;
+    border-radius: $border-rad;
+  }
+
+  h3 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+}
+
+
+.attribution {
+  position: fixed;
+  color: $accent-color;
+  bottom: 1rem;
+  left: 1rem;
+}
